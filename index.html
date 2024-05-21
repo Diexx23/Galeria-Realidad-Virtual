@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Proyectos Three.js</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="app-bar navbar navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Galería Proyectos Three.js</a>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a id="modulo1Button" class="nav-link btn btn-outline-primary mx-2" href="#">Módulo 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="modulo2Button" class="nav-link btn btn-outline-primary mx-2" href="#">Módulo 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="moduloFBXButton" class="nav-link btn btn-outline-primary mx-2" href="#">Módulo FBX</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div id="moduloContainer" class="row"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white mt-auto py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <h5>Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: davasquezs@academia.usbbog.edu.co</li>
+                        <li>Teléfono: +57 310-625-2251</li>
+                        <li>Dirección: Bosa donde la gente Goza, Bogota, Colombia</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5>Síguenos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">LinkedIn</a></li>
+                        <li><a href="#" class="text-white">Instagram</a></li>
+                        <li><a href="#" class="text-white">facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón para activar VR -->
+    <button id="vrButton" style="position: absolute; top: 10px; right: 10px;">Activar VR</button>
+
+    <!-- Carga de Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.js"></script>
+    <script type="importmap">{
+        "imports": {
+            "three": "../js/three.module.js"
+        }
+    }</script>
+
+    <!-- Carga de los scripts JavaScript -->
+    <script type="module" src="js/BaseScene.js"></script>
+    <script type="module" src="js/Modulo1.js"></script>
+    <script type="module" src="js/Modulo2.js"></script>
+    <script type="module" src="js/ModuloFBX.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
